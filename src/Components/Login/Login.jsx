@@ -4,6 +4,7 @@ import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { ThreeDots } from 'react-loader-spinner';
 import { authContext } from '../../Context/authentication';
+import { Helmet } from 'react-helmet';
 
 
 export default function Login() {
@@ -70,7 +71,12 @@ export default function Login() {
 
 })
   return <>
-    
+    <Helmet>
+      <title>Login</title>
+      
+
+    </Helmet>
+
     <div className="container  ">
       {errMsg ? <div className=" alert alert-danger mx-auto  text-center mt-3 w-25 ">{errMsg}</div> : ''}
       {successMsg ? <div className=" alert alert-success  mx-auto text-center  mt-3 w-25 ">{successMsg}</div> : ''}

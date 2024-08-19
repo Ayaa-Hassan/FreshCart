@@ -7,6 +7,7 @@ import axios from 'axios';
 import {  useQuery } from 'react-query';
 import { Oval } from 'react-loader-spinner';
 import { RiFireLine } from "react-icons/ri";
+import { Helmet } from 'react-helmet';
 
 
 
@@ -47,6 +48,10 @@ export default function CategorySlider() {
 
 
     return <>
+        <Helmet>
+            <title>Categories</title>
+            
+        </Helmet>
         <h4 className='fw-normal my-3 ms-4'><RiFireLine className='min-color' />Shop Popular Categories </h4>
         <Slider {...settings}>
             

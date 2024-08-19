@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode'
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet';
 import { Oval } from 'react-loader-spinner';
 
 export default function AllOrders() {
@@ -52,6 +53,10 @@ useEffect(() => {
 
 
     return <>
+        <Helmet>
+            <title>All Orders</title>
+
+        </Helmet>
         <div className="container py-5">
             <div className="row justify-content-center ">
                 <h2 className='text-center '>All Orders</h2>

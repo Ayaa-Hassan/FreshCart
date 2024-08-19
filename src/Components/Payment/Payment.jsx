@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 import { cartContext } from '../../Context/cartContext';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export default function Payment() {
 const naveFun= useNavigate()
@@ -97,6 +98,10 @@ try {
 
 
     return <>
+        <Helmet>
+            <title>Checkout</title>
+            
+        </Helmet>
         <div className=" container py-5 my-5">
             <div className="row  ">
                 <h2 className=' text-center mb-5'>Shipping</h2>

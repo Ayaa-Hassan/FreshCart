@@ -10,6 +10,7 @@ import { GiShoppingCart } from "react-icons/gi";
 import { useContext } from 'react';
 import { cartContext } from '../../Context/cartContext';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -64,6 +65,10 @@ export default function Products() {
 
 
   return <>
+    <Helmet>
+      <title>Products</title>
+
+    </Helmet>
     
     <div className=" container py-5  ">
       

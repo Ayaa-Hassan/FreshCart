@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { cartContext } from "../../Context/cartContext";
 import toast from "react-hot-toast";
 import { Oval, ThreeDots } from 'react-loader-spinner';
+import { Helmet } from "react-helmet";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -79,6 +80,9 @@ export default function ProductDetails() {
             </figure>
           </div>
           <div className="col-md-8  py-5 my-5 ">
+            <Helmet>
+              <title>{data.data.data.title.split(' ').slice(0, 2).join(" ")}</title>
+            </Helmet>
             <div className="">
               <h5 className="my-3">{data.data.data.title}</h5>
               <p className=" text-muted my-3 p-3">
@@ -111,9 +115,9 @@ export default function ProductDetails() {
                 </button>
               
               
-                <button className=" btn cart text-white min-bg-color "><FaRegHeart size={20} />
+                {/* <button className=" btn cart text-white min-bg-color "><FaRegHeart size={20} />
                     Add to WishList
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

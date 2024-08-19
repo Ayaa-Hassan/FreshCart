@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet';
 import {  ThreeDots } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 
@@ -66,7 +67,10 @@ export default function Register() {
 
 
   return <>
-    
+    <Helmet>
+      <title>Sign Up</title>
+      
+    </Helmet>
     <div className="container">
       <div className="row   my-5 shadow-lg  w-75 mx-auto">
          <div className="col-md-5 mx-auto my-5 ">

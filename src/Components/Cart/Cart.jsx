@@ -6,6 +6,7 @@ import { TiShoppingCart } from 'react-icons/ti';
 import { TbReportMoney } from 'react-icons/tb';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -108,6 +109,11 @@ async function deleteItem(id) {
  
   
   return <>
+    <Helmet>
+      <title>Cart</title>
+      
+
+    </Helmet>
     <div className=" container py-5 my-5 " style={{ backgroundColor: '#eee' }}>
       
       <div className=" w-100 border-bottom pb-5  d-flex justify-content-between">

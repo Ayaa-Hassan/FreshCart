@@ -17,6 +17,7 @@ import { Toaster } from 'react-hot-toast';
 import Cart from './Components/Cart/Cart';
 import Payment from './Components/Payment/Payment';
 import AllOrders from './Components/AllOrders/AllOrders';
+import { Offline } from 'react-detect-offline';
 
 
 
@@ -72,9 +73,11 @@ const myRouter = createBrowserRouter([
       },
       { path: 'login', element: <Login /> },
       { path: 'register', element: <Register /> },
-      { path: '*', element: <NotFound /> },
+      
     ]
+    
   },
+  { path: '*', element: <NotFound /> }
 ]);
 
 
@@ -84,15 +87,46 @@ function App() {
   let clintQuery = new QueryClient({
     
   })
-  return <QueryClientProvider  client={clintQuery}>
-    <CartContextProvider>
-      <AuthProvider>
-        <RouterProvider router={myRouter} />
-       
-      </AuthProvider>
-    </CartContextProvider>
-    <Toaster />
-  </QueryClientProvider>
+  return <>
+  
+    <QueryClientProvider client={clintQuery}>
+      <CartContextProvider>
+        <AuthProvider>
+          <RouterProvider router={myRouter} />
+
+        </AuthProvider>
+      </CartContextProvider>
+      <Toaster />
+    </QueryClientProvider>
+  
+  
+  
+    <Offline>
+      <div className=" position-fixed top-0 start-50 bg-dark text-white p-3 rounded-3 ">
+        <h5 className="text-center">Oops.... You are offline</h5>
+
+      </div>
+
+
+
+
+  </Offline>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </>
+
+
+  
+  
 };
 
 export default App;

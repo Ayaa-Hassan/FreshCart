@@ -2,6 +2,7 @@ import { jwtDecode } from 'jwt-decode'
 import React, { useEffect, useState } from 'react'
 import { Oval } from 'react-loader-spinner';
 import hello from "../../images/vecteezy_3d-kid-character-waving-hand-with-cute-happy-face_34918438.png";
+import { Helmet } from 'react-helmet';
 
 
 
@@ -39,6 +40,10 @@ const [name, setName] = useState(null);
 
 
   return < >
+    <Helmet>
+      <title>Profile</title>
+      
+    </Helmet>
     <div className=" ">
 
       <div className=" container">

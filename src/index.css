@@ -10,6 +10,12 @@
     border: 1px solid #0AAD0A;
     border-radius: 6px;
 }
+.btn-min-ho:hover{
+    border: 1px solid #065606;
+    background-color: #065606;
+    border-radius: 6px;
+    color: #fff;
+}
 
 a,
 a:hover {
